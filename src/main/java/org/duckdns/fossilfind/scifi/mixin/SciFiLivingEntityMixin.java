@@ -1,5 +1,6 @@
 package org.duckdns.fossilfind.scifi.mixin;
 
+import org.duckdns.fossilfind.scifi.world.dimension.SciFiDimensions;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -8,7 +9,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.ForgeMod;
 
@@ -30,7 +30,7 @@ public abstract class SciFiLivingEntityMixin
 	
 	private static double getGravity(ResourceKey<Level> dimension)
 	{
-		if(dimension.location().equals(BuiltinDimensionTypes.NETHER.location()))
+		if(dimension.location().equals(SciFiDimensions.MOON_TYPE.location()))
 			return MOON_GRAVITY;
 		
 		return EARTH_GRAVITY;

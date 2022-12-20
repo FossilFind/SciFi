@@ -7,7 +7,7 @@
 		"biome_source":
 		{
 			"type": "minecraft:fixed",
-			"biome": "minecraft:jagged_peaks"
+			"biome": "scifi:moon"
 		}
 	}
 }
