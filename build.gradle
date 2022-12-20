@@ -71,8 +71,8 @@ minecraft
 
 mixin
 {
-	add sourceSets.main, 'quark.mixin.refmap.json'
-	config 'quark.mixins.json'
+	add sourceSets.main, 'scifi.mixin.refmap.json'
+	config 'scifi.mixins.json'
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
