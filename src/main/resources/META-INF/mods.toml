@@ -1,0 +1,18 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="All rights reserved"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
+
+[[mods]]
+modId="scifi"
+version="${file.jarVersion}"
+displayName="SciFi Mod"
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
+logoFile="logo.png"
+credits="Modding tutorialers"
+authors="FossilFind"
+
+description='''
+Futuristic sci fi mod
+'''
