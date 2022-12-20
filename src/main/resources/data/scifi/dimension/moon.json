@@ -1,0 +1,13 @@
+{
+	"type": "scifi:moon",
+	"generator":
+	{
+		"type": "minecraft:noise",
+		"settings": "minecraft:overworld",
+		"biome_source":
+		{
+			"type": "minecraft:fixed",
+			"biome": "minecraft:jagged_peaks"
+		}
+	}
+}
