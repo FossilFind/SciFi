@@ -21,17 +21,13 @@ plugins
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 
-version = '1.0'
-group = 'org.duckdns.fossilfind.scifi'
-archivesBaseName = 'scifi'
-
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 
 minecraft
 {
-    mappings channel: 'parchment', version: '2022.08.14-1.19.2'
+    mappings channel: 'parchment', version: parchmentVersion + '-' + mcVersion
 	
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 	
@@ -41,7 +37,7 @@ minecraft
         {
             workingDirectory project.file('run')
             
-            property 'forge.enabledGameTestNamespaces', archivesBaseName
+            property 'forge.enabledGameTestNamespaces', modid
 			
             mods
             {
@@ -56,7 +52,7 @@ minecraft
         {
             workingDirectory project.file('run')
             
-            property 'forge.enabledGameTestNamespaces', archivesBaseName
+            property 'forge.enabledGameTestNamespaces', modid
 			
             mods
             {
@@ -71,8 +67,8 @@ minecraft
 
 mixin
 {
-	add sourceSets.main, 'scifi.mixin.refmap.json'
-	config 'scifi.mixins.json'
+	add sourceSets.main, '${modid}.mixin.refmap.json'
+	config '${modid}.mixins.json'
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
@@ -93,14 +89,14 @@ repositories
 
 dependencies
 {
-    minecraft 'net.minecraftforge:forge:1.19.2-43.1.65'
+    minecraft 'net.minecraftforge:forge:' + mcVersion + '-' + forgeVersion
     
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     
-    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}"))
-	compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}"))
+    //compileOnly(fg.deobf("mezz.jei:jei-${mcVersion}-common-api:${jeiVersion}"))
+	//compileOnly(fg.deobf("mezz.jei:jei-${mcVersion}-forge-api:${jeiVersion}"))
 	
-	runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
+	//runtimeOnly(fg.deobf("mezz.jei:jei-${mcVersion}-forge:${jeiVersion}"))
 }
 
 jar
@@ -111,12 +107,12 @@ jar
         ([
                 "Specification-Title"     : "SciFiMod",
                 "Specification-Vendor"    : "FossilFind",
-                "Specification-Version"   : "1.0",
+                "Specification-Version"   : version,
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "FossilFind",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs": "scifi.mixins.json"
+                "MixinConfigs": "${modid}.mixins.json"
         ])
     }
 }

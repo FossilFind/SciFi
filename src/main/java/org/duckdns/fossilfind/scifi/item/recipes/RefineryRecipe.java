@@ -13,7 +13,6 @@ import com.google.gson.JsonSyntaxException;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.NonNullList;
-import net.minecraft.core.Registry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.SimpleContainer;
@@ -24,6 +23,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class RefineryRecipe implements Recipe<SimpleContainer>
 {
@@ -131,7 +131,6 @@ public class RefineryRecipe implements Recipe<SimpleContainer>
 		public static final Serializer INSTANCE = new Serializer();
 		public static final ResourceLocation ID = new ResourceLocation(SciFi.MODID, Type.ID);
 		
-		@SuppressWarnings("deprecation")
 		@Override
 		public RefineryRecipe fromJson(ResourceLocation recipeId, JsonObject serializedRecipe)
 		{
@@ -143,7 +142,7 @@ public class RefineryRecipe implements Recipe<SimpleContainer>
 			if(serializedRecipe.get("ingredient").isJsonObject())
 				input = Ingredient.fromJson(serializedRecipe.getAsJsonObject("ingredient"));
 			else
-				input = Ingredient.of(new ItemStack(Registry.ITEM.get(new ResourceLocation(serializedRecipe.get("ingredient").getAsString()))));
+				input = Ingredient.of(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation(serializedRecipe.get("ingredient").getAsString()))));
 			
 			ItemStack output;
 			
@@ -153,7 +152,7 @@ public class RefineryRecipe implements Recipe<SimpleContainer>
 			if(serializedRecipe.get("result").isJsonObject())
 				output = ShapedRecipe.itemStackFromJson(serializedRecipe.getAsJsonObject("result"));
 			else
-				output = new ItemStack(Registry.ITEM.get(new ResourceLocation(serializedRecipe.get("result").getAsString())));
+				output = new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation(serializedRecipe.get("result").getAsString())));
 			
 			int cookingTime;
 			
