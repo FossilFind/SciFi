@@ -1,0 +1,13 @@
+#!/bin/sh
+
+./gradlew clean
+
+./gradlew eclipse
+
+rm SciFiClient.launch
+rm SciFiServer.launch
+
+./gradlew genEclipseRuns
+
+mv runClient.launch SciFiClient.launch
+mv runServer.launch SciFiServer.launch
