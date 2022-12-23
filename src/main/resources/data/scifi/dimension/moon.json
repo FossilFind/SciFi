@@ -3,7 +3,7 @@
 	"generator":
 	{
 		"type": "minecraft:noise",
-		"settings": "minecraft:end",
+		"settings": "scifi:moon",
 		"biome_source":
 		{
 			"type": "minecraft:fixed",

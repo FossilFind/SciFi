@@ -19,4 +19,6 @@ public class SciFiItems
 	 * Block Items
 	 */
 	public static final RegistryObject<Item> REFINERY = ITEMS.register("refinery", () -> new BlockItem(SciFiBlocks.REFINERY.get(), new Item.Properties()));
+	
+	public static final RegistryObject<Item> MOON_REGOLITH = ITEMS.register("moon_regolith", () -> new BlockItem(SciFiBlocks.MOON_REGOLITH.get(), new Item.Properties()));
 }
