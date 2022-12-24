@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"key":
+	{
+		"#":
+		{
+			"item": "scifi:bauxite"
+		}
+	},
+	"pattern":
+	[
+		"###",
+		"###",
+		"###"
+	],
+	"result":
+	{
+		"item": "scifi:bauxite_block"
+	}
+}

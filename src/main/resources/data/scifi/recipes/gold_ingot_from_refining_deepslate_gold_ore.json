@@ -1,0 +1,6 @@
+{
+	"type": "scifi:refining",
+	"cookingTime": 200,
+	"ingredient": "minecraft:deepslate_gold_ore",
+	"result": "minecraft:gold_ingot"
+}

@@ -1,7 +1,27 @@
 {
+	"item.scifi.bauxite": "Bauxite",
+	"item.scifi.rutile": "Rutile",
+	"item.scifi.tantilite": "Tantilite",
+	
 	"item.scifi.aluminum_ingot": "Aluminum Ingot",
+	"item.scifi.titanium_ingot": "Titanium Ingot",
+	"item.scifi.tantalum_ingot": "Tantalum Ingot",
 	
 	"block.scifi.refinery": "Refinery",
+	
+	"block.scifi.moon_regolith": "Moon Regolith",
+	
+	"block.scifi.bauxite_ore": "Bauxite Ore",
+	"block.scifi.rutile_ore": "Rutile Ore",
+	"block.scifi.tantilite_ore": "Tantilite Ore",
+	
+	"block.scifi.bauxite_block": "Bauxite Block",
+	"block.scifi.rutile_block": "Rutile Block",
+	"block.scifi.tantilite_block": "Tantilite Block",
+	
+	"block.scifi.aluminum_block": "Aluminum Block",
+	"block.scifi.titanium_block": "Titanium Block",
+	"block.scifi.tantalum_block": "Tantalum Block",
 	
 	"container.scifi.refinery": "Refinery"
 }

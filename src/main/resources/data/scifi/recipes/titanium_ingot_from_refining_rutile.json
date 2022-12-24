@@ -1,0 +1,6 @@
+{
+	"type": "scifi:refining",
+	"cookingTime": 200,
+	"ingredient": "scifi:rutile",
+	"result": "scifi:titanium_ingot"
+}

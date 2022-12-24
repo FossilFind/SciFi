@@ -1,0 +1,14 @@
+{
+	"values":
+	[
+		"scifi:bauxite_ore",
+		"scifi:rutile_ore",
+		"scifi:tantilite_ore",
+		"scifi:bauxite_block",
+		"scifi:rutile_block",
+		"scifi:tantilite_block",
+		"scifi:aluminum_block",
+		"scifi:titanium_block",
+		"scifi:tantalum_block"
+	]
+}

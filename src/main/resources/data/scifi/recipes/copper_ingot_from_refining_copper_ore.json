@@ -1,0 +1,6 @@
+{
+	"type": "scifi:refining",
+	"cookingTime": 200,
+	"ingredient": "minecraft:copper_ore",
+	"result": "minecraft:copper_ingot"
+}

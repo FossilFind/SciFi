@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients":
+	[
+		{
+			"item": "scifi:tantilite_block"
+		}
+	],
+	"result":
+	{
+		"count": 9,
+		"item": "scifi:tantilite"
+	}
+}

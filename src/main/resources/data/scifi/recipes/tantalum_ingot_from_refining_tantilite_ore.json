@@ -1,0 +1,6 @@
+{
+	"type": "scifi:refining",
+	"cookingTime": 200,
+	"ingredient": "scifi:tantilite_ore",
+	"result": "scifi:tantalum_ingot"
+}
