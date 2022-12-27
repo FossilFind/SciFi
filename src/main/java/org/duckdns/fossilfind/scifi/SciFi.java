@@ -21,8 +21,8 @@ public class SciFi
 		
 		SciFiBlocks.BLOCKS.register(bus);
 		SciFiBlockEntities.BLOCK_ENTITIES.register(bus);
-		SciFiMenus.MENUS.register(bus);
 		SciFiItems.ITEMS.register(bus);
+		SciFiMenus.MENUS.register(bus);
 		SciFiRecipes.SERIALIZERS.register(bus);
 	}
 }
